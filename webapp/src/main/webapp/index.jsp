@@ -1,2 +1,2 @@
-<h1> Hello, Welcome to CI/CD pipeline !!! </h1>
-<h2> Trying the changes from git bash <h2>
+<h1> Hello, Welcome to CI/CD pipeline !!! playbook was invoked to deploy war file to tomcat server</h1>
+
