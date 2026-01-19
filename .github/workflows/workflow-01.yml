@@ -1,0 +1,13 @@
+name: Example workflow 01
+
+on:
+  workflow_dispatch:
+
+jobs:
+  workflow_job_1:
+    name: workflow-job1
+    runs-on: ubuntu-slim
+
+    steps:
+      - name: Run shell
+        run: ls
