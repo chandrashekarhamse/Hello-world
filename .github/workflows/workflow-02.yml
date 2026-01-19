@@ -1,10 +1,12 @@
 on:
-  label:
-    types: [created]
+  push:
+    branches: 
+      - master
+      - main
 
 jobs:
   label_issue:
     runs-on: ubuntu-24.04
     steps:
-    - run: echo "run after label created"
+    - run: echo "run after after merge"
     
