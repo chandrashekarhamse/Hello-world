@@ -5,7 +5,7 @@ on:
 
 jobs:
   my_demo_job:
-    name: Example shell command execution
+    name: demo-job-1
     runs-on: ubuntu-latest
 
     steps:
