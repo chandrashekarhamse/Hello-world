@@ -1,8 +1,10 @@
-on: [push, fork]
+on:
+  label:
+    types: [created]
 
 jobs:
   label_issue:
     runs-on: ubuntu-24.04
     steps:
-    - run: echo "run after issue is created"
+    - run: echo "run after label created"
     
