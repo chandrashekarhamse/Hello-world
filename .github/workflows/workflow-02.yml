@@ -1,3 +1,4 @@
+name: Workflow-2
 on:
   pull_request:
     branches:
@@ -7,5 +8,6 @@ jobs:
   label_issue:
     runs-on: ubuntu-24.04
     steps:
+      name: run echo command
     - run: echo "run PR is created"
     
