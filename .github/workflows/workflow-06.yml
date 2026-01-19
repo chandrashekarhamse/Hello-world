@@ -1,0 +1,27 @@
+name: demo runner
+on:
+  workflow_dispatch:
+    inputs:
+      chosen-os:
+        required: true
+        type: choice
+        options:
+          - azure
+          - linux
+
+concurrency:
+  group: ${{ github.repository == 'chandrashekarhamse/Hello-world' }}
+  cancel-in-progress: true
+
+jobs:
+  self-hosted-runners:
+    runs-on: [ self-hosted, "${{ inputs.chosen-os }}"]
+    steps:
+      - name: check hostname
+        run: hostname
+      - name: list dir
+        run: ls
+      - name: message
+        run: echo "Hello world"
+
+  
