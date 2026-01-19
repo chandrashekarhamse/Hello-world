@@ -1,0 +1,22 @@
+name: self hosted runner demo
+on:
+  push:
+    branches:
+      - master 
+      
+concurrency:
+  group: azure-concurrency
+  cancel-in-progress: true
+
+jobs:
+  self-hosted-runner-job:
+    if: ${{ github.repository == 'chandrashekarhamse/Hello-world' }}
+    runs-on: [self-hosted, azure]
+    steps:
+      - name: display hostname
+        run: hostname
+      - name: display message
+        run: echo "Job ran on self hosted runners"
+      - name: display date
+        run: date
+
