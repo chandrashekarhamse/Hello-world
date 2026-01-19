@@ -1,0 +1,10 @@
+name: Workflow-03
+on: [push]
+jobs:
+  prod-deploy:
+    if: ${{ github.repository == 'chandrashekarhamse/Hello-world' }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: check npm version 
+      run: npm --version
+
