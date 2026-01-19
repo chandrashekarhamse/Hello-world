@@ -1,0 +1,20 @@
+name: workflow-04 concurrency
+on:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  concurrency-test:
+    name: Test concurrency
+    runs-on: ubuntu-20.04
+    steps:
+      - name: test concurrency
+        run: |
+          echo "Hello testing concurrency"
+          sleep 60
+  
