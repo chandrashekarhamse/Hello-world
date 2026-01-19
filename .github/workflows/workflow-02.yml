@@ -1,7 +1,4 @@
-on:
-  issues:
-    types:
-    - opened
+on: [push, fork]
 
 jobs:
   label_issue:
