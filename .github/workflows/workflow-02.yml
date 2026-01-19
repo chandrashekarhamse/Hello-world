@@ -1,12 +1,11 @@
 on:
-  push:
-    branches: 
+  pull_request:
+    branches:
       - master
-      - main
 
 jobs:
   label_issue:
     runs-on: ubuntu-24.04
     steps:
-    - run: echo "run after after merge"
+    - run: echo "run PR is created"
     
