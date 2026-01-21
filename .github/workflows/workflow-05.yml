@@ -1,8 +1,6 @@
 name: self hosted runner demo
 on:
-  push:
-    branches:
-      - master 
+  workflow_dispatch: 
       
 concurrency:
   group: azure-concurrency
