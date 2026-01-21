@@ -1,5 +1,6 @@
 name: Workflow-03
-on: [push]
+on:
+  workflow_dispatch: 
 jobs:
   prod-deploy:
     if: ${{ github.repository == 'chandrashekarhamse/Hello-world' }}
