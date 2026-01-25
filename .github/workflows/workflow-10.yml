@@ -1,0 +1,13 @@
+name: Example shell workflow
+on: 
+  workflow_dispatch:
+
+jobs:
+  example-run-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: demo test script
+        run: |
+          echo "executing the script ./my-script.sh"
+          echo "Executing the script ./my-new-script.sh"
+        
